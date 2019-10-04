@@ -36,7 +36,7 @@ By following these instructions you provide both of our teams with data needed t
 
 ## Descriptions of Metrics-Related Query Parameters
 
-**If you are a developer, please read the following before checking the chart below.** The values that are passed in the parameters below are subject to validation via regular expressions. **If the parameter values do not conform to their associated regexes in [this file](https://github.com/mozilla/fxa-content-server/blob/0921bc53e92f3b8e4e796f51cc46202d1cfae25e/server/lib/flow-event.js) then all metrics events associated with the nonconforming parameters will fail to be logged!**
+**If you are a developer, please read the following before checking the chart below.** The values that are passed in the parameters below are subject to validation via regular expressions. **If the parameter values do not conform to their associated regexes in [this file](https://github.com/mozilla/fxa/blob/master/packages/fxa-content-server/server/lib/flow-event.js) then all metrics events associated with the nonconforming parameters will fail to be logged!**
 
 |Name|Description|Example Values|Validation regex|Amplitude Chart Example|
 |----|-----------|--------------|----------------|-----------------------|
@@ -51,7 +51,7 @@ By following these instructions you provide both of our teams with data needed t
 |`utm_medium`|What type of link was used to direct to the page, if it came through a marketing campaign|`email`, `cpc`|<!--begin-validation-utm_medium-->^[\w\/.%-]+$<!--end-validation-utm_medium-->|TBD|
 |`context`|Not relevant to metrics, but this is **required** to be set to one of `fx_desktop_v3`, `fx_fennec_v1` or `fx_ios_v1` if `service=sync`. Please use the value that reflects the most likely operating system of the user.|`fx_desktop_v3`, `fx_fennec_v1`, `fx_ios_v1`|<!--begin-validation-context-->^[0-9a-z_-]+$<!--end-validation-context-->/|NA|
 
-**Note these may not be all the parameters you need to pass for your integration to work!** A more exhaustive but [less detailed list can be found here.](https://github.com/mozilla/fxa-content-server/blob/549fc459b851088ea910da182e17e748fa157f26/docs/query-params.md#context) What is documented above are only the parameters that are relevant for metrics analysis in (e.g.) amplitude.
+**Note these may not be all the parameters you need to pass for your integration to work!** A more exhaustive but [less detailed list can be found here.](https://github.com/mozilla/fxa/blob/master/packages/fxa-content-server/docs/query-params.md#context) What is documented above are only the parameters that are relevant for metrics analysis in (e.g.) amplitude.
 
 Other Notes:
 * You must have access to the mozilla amplitude account to see the example charts. If you are a Mozilla employee, please contact Leif for information on gaining access to amplitude.
